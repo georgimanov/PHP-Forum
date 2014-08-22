@@ -28,8 +28,8 @@
           <file leaf-file-name="login-form.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/login-form.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2042042" vertical-offset="0" max-vertical-offset="408">
-                  <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+                <state vertical-scroll-proportion="0.3063063" vertical-offset="0" max-vertical-offset="408">
+                  <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
                   <folding />
                 </state>
               </provider>
@@ -42,8 +42,8 @@
           <file leaf-file-name="login-styles.css" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/styles/login-styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.1827957" vertical-offset="0" max-vertical-offset="901">
-                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                <state vertical-scroll-proportion="0.45698926" vertical-offset="510" max-vertical-offset="1003">
+                  <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -259,16 +259,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login-form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2042042" vertical-offset="0" max-vertical-offset="408">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.3063063" vertical-offset="0" max-vertical-offset="408">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/login-styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1827957" vertical-offset="0" max-vertical-offset="901">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.45698926" vertical-offset="510" max-vertical-offset="1003">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding />
         </state>
       </provider>
