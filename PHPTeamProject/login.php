@@ -27,7 +27,7 @@ require_once 'header.php';
 			header("Location: http://$host$uri/$extra");
 			exit ;
 		}else{
-			echo "Unvalid username or password";
+			echo "Invalid username or password";
 		}
 	}
 ?>
