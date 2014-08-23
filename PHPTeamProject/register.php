@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
 			$pass = md5($pass);
 			$sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname'");
 			if (mysql_num_rows($sql) > 0) {
-				echo "User with that name already exist";
+				echo "User with that name already exists.";
 				exit();
 			}
 			mysql_query("INSERT INTO `users` (`id`,`name`,`lname`,`uname`,`pass`,`email`) 
