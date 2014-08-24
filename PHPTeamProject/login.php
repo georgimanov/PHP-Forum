@@ -1,19 +1,17 @@
 <?php
 require_once 'header.php';
 ?>
-<form method="post">
-	Username:
-	<input type="text" name="uname" />
-	<br/>
-	Password:
-	<input type="password" name="pass"/>
-	<br/>
-	<input type="submit" name="submit" value="Login"/>
-</form>
-
+<div id="login-form">
+    <a href="#"><img src="images/logo.png" id="logo-img"/></a>
+    <form method="post">
+        <input type="text" id="user" name="uname" placeholder="username">
+        <input type="password" id="pass" name="pass" placeholder="password">
+        <input type="submit" name="submit" id="submit-button" value="login">
+    </form>
+</div>
 <?php
 	require_once 'config.php';
-	require_once 'footer.php';
+	//require_once 'footer.php';
 	if (isset($_POST['submit'])) {
 		$uname = mysql_escape_string($_POST['uname']);
 		$pass = mysql_escape_string($_POST['pass']);
