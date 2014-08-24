@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="02.About.html">About</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Forum</a></li>
             <li><a href="#">Contacts</a></li>
