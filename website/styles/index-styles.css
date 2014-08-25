@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'NeutraText-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/NeutraText-Light.ttf);
+}
+body {
+    /*background-image: url("../images/background.jpg");*/
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: 0 0;
+    height: 100%;
+}
+#index-wrapper {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 10%;
+}
+#logo {
+    vertical-align: middle;
+    width: 240px;
+    margin: 0 30px;
+}
+a {
+    text-decoration: none;
+    font-family: 'NeutraText-Light';
+    font-size: 120px;
+    line-height: 100%;
+    vertical-align: middle;
+}
+#login {
+    color: rgb(29, 159, 105);
+}
+#login:hover {
+    border-bottom: 4px solid rgb(29, 159, 105);
+}
+#register {
+    color: rgb(158, 55, 42);
+}
+#register:hover {
+    border-bottom: 4px solid rgb(158, 55, 42);
+}
