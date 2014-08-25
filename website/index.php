@@ -7,14 +7,11 @@
 </head>
 <body>
 <main>
-
-    <!-- <div id="global-wrapper"> -->
       <div id="index-wrapper">
-        <a href="login.php" id="login">LOGIN</a>
-        <img id="logo" src="images/logo-fulll.png">
-        <a href="register.php" id="register">REGISTER</a>
+        <a href="login.php" id="login" class="animated fadeInRight">LOGIN</a>
+        <img id="logo" src="images/logo-fulll.png" class="animated fadeIn">
+        <a href="register.php" id="register" class="animated fadeInLeft">REGISTER</a>
       </div>
-    <!-- </div> -->
 </main>
 <footer></footer>
 

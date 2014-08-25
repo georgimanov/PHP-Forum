@@ -2,7 +2,7 @@
 require_once 'header.php';
 ?>
 <div id="login-form">
-    <a href="#"><img src="images/logo.png" id="logo-img"  class="animated fadeInDown"/></a>
+    <a href="index.php"><img src="images/logo.png" id="logo-img"  class="animated fadeInDown"/></a>
     <form method="post" class="animated fadeInUp">
         <input type="text" id="user" name="uname" placeholder="username">
         <input type="password" id="pass" name="pass" placeholder="password">
