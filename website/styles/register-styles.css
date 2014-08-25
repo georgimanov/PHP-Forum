@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'NeutraText-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/NeutraText-Light.ttf);
+}
+
+register-wrapper {
+    font-family: 'NeutraText-Light', Verdana, sans-serif;
+}
+
+#register-wrapper{
+    margin: 0 auto;
+    width: 30%;
+    display: block;
+}
+
+#register-wrapper form{
+    padding-top: 30px;
+    background-color: #E7E8E9;
+    border-radius: 30px;
+}
+.logo-img-fulll{
+    margin: 30px 0 30px 15%;
+    width: 250px;
+}
+
+#register-wrapper form input{
+    display: block;
+    width: 80%;
+    margin: 10px 10%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    font-size: 24px;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+}
+
+::-webkit-input-placeholder{
+    color: #E7E8E9;
+    text-transform: uppercase;
+    font-family: NeutraText-Light;
+}
+
+#register-wrapper form input[type='submit']{
+    margin-top: 80px;
+}
+
+#submit-register{
+    margin-top: 80px;
+    background-color: #279F69;
+    color: white;
+    text-transform: uppercase;
+    font-family: NeutraText-Light;
+}

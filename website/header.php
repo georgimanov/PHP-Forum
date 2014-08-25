@@ -4,6 +4,8 @@
 <meta charset="utf-8" />
     <title>Soupaholics</title>
     <link rel="stylesheet" href="styles/login-styles.css">
+	<link rel="stylesheet" href="styles/register-styles.css">
+	
 </head>
 <body>
     <header>
