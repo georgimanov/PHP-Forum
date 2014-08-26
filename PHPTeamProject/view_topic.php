@@ -3,6 +3,7 @@ session_start();
 
 require_once 'header.php';
 ?>
+
 Hello <?php echo $_SESSION['uname'] ?>!
 <a href="logout.php" >Logout</a>
 <?php
@@ -12,7 +13,6 @@ require_once 'config.php';
 	$cid = $_GET['cid'];
 	$tid = $_GET['tid'];
 	$sql = "SELECT * FROM topics WHERE id=$tid";
-	echo "$tid";
 	$res = mysql_query($sql) or die(mysql_error());
 	if(mysql_num_rows($res)  > 0 ){
 		$title = "";
@@ -23,8 +23,9 @@ require_once 'config.php';
 			$topic_creator = $row['topic_creator'];
 			$topic_date = $row['topic_date'];
 		}
+		echo $_SESSION['uname'];
 		?>
-		<table border="1">
+		<table class="topics">
 			<tr><th><?php echo $topic_creator ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>
 			<?php $sql2 = "SELECT * FROM posts WHERE topic_id=$tid";
 			$res2 = mysql_query($sql2) or die(msql_error());

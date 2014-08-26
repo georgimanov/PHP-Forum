@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 		$res = mysql_query($sql) or die (mysql_error());
 		$new_topic_id = mysql_insert_id();
 		$sql2 = "INSERT INTO posts (category_id, topic_id, post_creator, post_content, post_date) VALUES (
-		'".$cid."', '".$new_topic_id."', '".$creator."', '".$content."', now())";		
+		'".$cid."', '".$new_topic_id."', '".$_SESSION['uname']."', '".$content."', now())";		
 		$res2 = mysql_query($sql2) or die(mysql_error());
 		$sql3 = "UPDATE categories SET last_post_date = now(), last_user_posted='".$creator."' WHERE id='".$cid."'
 		LIMIT 1 ";
