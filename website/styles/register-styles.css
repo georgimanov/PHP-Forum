@@ -45,7 +45,8 @@ register-wrapper {
 }
 
 ::-webkit-input-placeholder{
-    color: #E7E8E9;
+    /*color: #E7E8E9;*/
+    color: rgb(78, 47, 145);
     text-transform: uppercase;
     font-family: NeutraText-Light;
 }
