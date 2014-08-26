@@ -51,7 +51,6 @@
 }
 
 .top{
-    float: left;
     width: 100%;
     text-align: center;
 }
@@ -62,20 +61,20 @@
 }
 
 .post-button {
-    margin-top: 25px;
-    margin-left: 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: #279F69;
-    width: 200px;
-    height: 40px;
-
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .post-button a{
+    font-size: 20px;
+    background-color: #279F69;
     text-decoration: none;
     color: #fff;
     line-height: 40px;
+    padding: 20px;
+    border-radius: 5px;
+
 }
 
 .center{
