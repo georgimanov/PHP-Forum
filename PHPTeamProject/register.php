@@ -45,11 +45,10 @@ if (isset($_POST['submit'])) {
 			$pass2 = mysql_escape_string($pass2);
 			$pass = md5($pass);
 			$sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname'");
-			if(!((ord($name[0]) >= 65) && (ord($name[0]) <= 90)) 
-			|| !((ord($name[0]) >= 97) && (ord($name[0]) <= 122))){
-				echo "<div class='invalid_input'>Username can't start with this symbol</div> ";
-				exit();
-			}
+			if(((ord($name[0]) >= 65) && (ord($name[0]) <= 90)) 
+			|| ((ord($name[0]) >= 97) && (ord($name[0]) <= 122))){
+			
+			
 			if (mysql_num_rows($sql) > 0) {
 				echo "User with that name already exist";
 				exit();
@@ -67,7 +66,10 @@ if (isset($_POST['submit'])) {
 			//  Created by iliq9204 on 2014-08-22.
 			//  Copyright 2014 iliq9204. All rights reserved.
 			//
-
+			}else{
+				echo "<div class='invalid_input'>Username can't start with this symbol</div> ";
+				exit();
+			}
 		} else {
 			echo "Password doesn't match";
 		}
