@@ -4,13 +4,13 @@ require_once 'config.php';
 ?>
 <form action="register.php" method="post">
 	First Name :
-	<input type="text" name="name" />
+	<input type="text" name="name" required="required"/>
 	<br/>
 	Last Name :
-	<input type="text" name="lname" />
+	<input type="text" name="lname" required="required"/>
 	<br/>
 	Username :
-	<input type="text" name="uname" />
+	<input type="text" name="uname" required="required"/>
 	<br/>
 	Email :
 	<input type="email" name="email" />
@@ -19,10 +19,10 @@ require_once 'config.php';
 	<input type="email" name="email2" />
 	<br/>
 	Password :
-	<input type="password" name="pass" />
+	<input type="password" name="pass" required="required"/>
 	<br/>
 	Confirm Password
-	<input type="password" name="pass2" />
+	<input type="password" name="pass2" required="required"/>
 	<br/>
 	<input type="submit" name="submit" value="Register"/>
 	<br/>
@@ -45,6 +45,11 @@ if (isset($_POST['submit'])) {
 			$pass2 = mysql_escape_string($pass2);
 			$pass = md5($pass);
 			$sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname'");
+			if(!((ord($name[0]) >= 65) && (ord($name[0]) <= 90)) 
+			|| !((ord($name[0]) >= 97) && (ord($name[0]) <= 122))){
+				echo "<div class='invalid_input'>Username can't start with this symbol</div> ";
+				exit();
+			}
 			if (mysql_num_rows($sql) > 0) {
 				echo "User with that name already exist";
 				exit();

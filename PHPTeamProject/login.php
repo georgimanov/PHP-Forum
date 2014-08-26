@@ -10,7 +10,7 @@ require_once 'header.php';
 	<br/>
 	<input type="submit" name="submit" value="Login"/>
 </form>
-
+<a href="register.php">Register</a>
 <?php
 session_start();
 	require_once 'config.php';
@@ -26,7 +26,6 @@ session_start();
 			$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 			$extra = 'content.php';
 			$_SESSION['uname'] = $uname;
-				echo $_SESSION['uname'];
 			header("Location: http://$host$uri/$extra");
 			
 		

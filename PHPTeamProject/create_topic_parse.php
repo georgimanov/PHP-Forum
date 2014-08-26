@@ -9,7 +9,7 @@ if ($_POST['cid'] == "" || !isset($_SESSION['uname'])) {
 	$host = $_SERVER['HTTP_HOST'];
 	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 	$extra = 'login.php';
-	//header("Location: http://$host$uri/$extra");
+	header("Location: http://$host$uri/$extra");
 	exit();
 }
 if (isset($_POST['submit'])) {

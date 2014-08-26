@@ -18,7 +18,7 @@ if (isset($_SESSION['uname'])) {
 		$sql2 = "SELECT * FROM topics WHERE category_id='" . $cid . "' ORDER BY topic_reply_date DESC";
 		$res2 = mysql_query($sql2) or die(mysql_error());
 		if(mysql_num_rows($res2) > 0){ ?>
-			<table width="95%">
+			<table width="95%" border="1">
 				<th>Topic title</th><th>Views</th>
 			<?php while ($row = mysql_fetch_assoc($res2)) { 
 				$tid = $row['id'];
@@ -47,7 +47,7 @@ if (isset($_SESSION['uname'])) {
 	} else {
 		$host = $_SERVER['HTTP_HOST'];
 		$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-		$extra = 'login.php';
+		$extra = 'content.php';
 		header("Location: http://$host$uri/$extra");
 	}
 }

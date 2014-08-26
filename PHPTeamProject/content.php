@@ -1,9 +1,7 @@
 <?php
 session_start();
 require_once 'header.php';
-?>
-Hello <?php echo $_SESSION['uname'] ?>! <a href="logout.php" >Logout</a>
-<?php
+
 ?>
 <?php require_once 'config.php'; 
 if(!isset($_SESSION['uname'])){
@@ -14,7 +12,9 @@ if(!isset($_SESSION['uname'])){
 			header("Location: http://$host$uri/$extra");
 	exit();
 }
-
+?>
+Hello <?php echo $_SESSION['uname'] ?>! <a href="logout.php" >Logout</a>
+<?php
 
 $sql = "SELECT * FROM categories ORDER BY category_title ASC";
 $res = mysql_query($sql) or die(mysql_error());
