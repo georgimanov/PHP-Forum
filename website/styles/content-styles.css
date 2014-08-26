@@ -13,17 +13,24 @@
 }
 
 .content h1{
-    background-color: rgba(39, 159, 105,1);
+    background-color: rgba(39, 159, 105, 1);
     color: #fff;
     text-align: center;
-    border-bottom: 3px solid rgba(103, 152, 54,1);
+    font-size: 1.5em;
+    font-weight: normal;
+    border-bottom: 3px solid rgba(21, 93, 62, 1);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin: 0;
+    padding: 5px;
 }
 
 .content p{
     margin: 0;
+}
+
+.content-img {
+    width: 50px;
 }
 
 .table{

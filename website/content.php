@@ -1,7 +1,7 @@
 <?php require_once 'header.php'; ?>
 
 <div class="top">
-    <a href="index.php"><img src="images/logo-very-small.png" class="content-img"></a>
+    <a href="index.php"><img src="images/logo-small.png" class="content-img"></a>
 </div>
 <div class=top>
 <div class="post-button">
@@ -9,7 +9,7 @@
 </div>
 </div>
 <div class="content left">
-    <h1>Categories</h1>
+    <h1>CATEGORIES</h1>
     <div class="table">
         <div class="row">
             <div class="cell">
@@ -56,7 +56,7 @@
 </div>
 
 <div class="content center">
-    <h1>TAGS</h1>
+    <h1>POSTS</h1>
     <p>Lorem ipsum</p>
 </div>
 
