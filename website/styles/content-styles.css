@@ -17,7 +17,8 @@
     color: #fff;
     text-align: center;
     border-bottom: 3px solid rgba(103, 152, 54,1);
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     margin: 0;
 }
 
@@ -31,7 +32,8 @@
     font-size: 18px;
     background-color: rgba(231, 232, 233,1);
     color: rgba(210, 105, 40,1);
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     border-bottom: 3px solid rgba(167,168,168,1);
 }
 
@@ -68,7 +70,8 @@
     font-size: 18px;
     background-color: rgba(231, 232, 233,1);
     color: rgba(210, 105, 40,1);
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     height: 340px;
     border-bottom: 3px solid rgba(167,168,168,1);
 }
@@ -82,7 +85,8 @@
     font-size: 18px;
     background-color: rgba(231, 232, 233,1);
     color: rgba(210, 105, 40,1);
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     height: 340px;
     border-bottom: 3px solid rgba(167,168,168,1);
 }
