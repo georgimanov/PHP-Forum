@@ -3,11 +3,11 @@
 <div class="top">
     <a href="index.php"><img src="images/logo-very-small.png" class="content-img"></a>
 </div>
-
-<div class="top">
+<div class=top>
+<div class="post-button">
     <a href="create-post.php">POST SOMETHING</a>
 </div>
-
+</div>
 <div class="content left">
     <h1>Categories</h1>
     <div class="table">

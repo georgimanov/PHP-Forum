@@ -61,6 +61,23 @@
 
 }
 
+.post-button {
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #279F69;
+    width: 200px;
+    height: 40px;
+
+}
+
+.post-button a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 40px;
+}
+
 .center{
     width: 60%;
 }
