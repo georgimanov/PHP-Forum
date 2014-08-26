@@ -62,6 +62,25 @@ register-wrapper {
     text-transform: uppercase;
     font-family: NeutraText-Light;
 }
+
+#warning-message {
+    color: red;
+    text-align: center;
+    font-size: 25px;
+}
+
+.warning {
+    color: red;
+    width: 400px;
+    text-align: center;
+    margin-right: 15%;
+    font-size: 25px;
+    clear: right;
+    float: right;
+}
+
+/* ANIMATIONS */
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -137,4 +156,3 @@ register-wrapper {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
-

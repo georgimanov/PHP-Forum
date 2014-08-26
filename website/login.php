@@ -25,7 +25,7 @@ require_once 'header.php';
 			header("Location: http://$host$uri/$extra");
 			exit ;
 		}else{
-			echo "Invalid username or password";
+			echo "<div id=\"warning-message\" class=\"animated fadeInUp\">Invalid username or password</div>";
 		}
 	}
 ?>

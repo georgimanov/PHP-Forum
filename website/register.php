@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
             $pass = md5($pass);
             $sql = mysql_query("SELECT * FROM `usersdb` WHERE `uname` = '$uname'");
             if (mysql_num_rows($sql) > 0) {
-                echo "User with that name already exists.";
+                echo "<div class=\"warning animated fadeInLeft\">User with that name already exists.</div>";
                 exit();
             }
             mysql_query("INSERT INTO `usersdb` (`id`,`name`,`lname`,`uname`,`pass`,`email`)
@@ -52,10 +52,10 @@ if (isset($_POST['submit'])) {
             //
 
         } else {
-            echo "Password doesn't match";
+            echo "<div class=\"warning animated fadeInLeft\">Password doesn't match.</div>";
         }
     } else {
-        echo "Email doesn't match";
+        echo "<div class=\"warning animated fadeInLeft\">Email doesn't match.</div>";
     }
 }
 
