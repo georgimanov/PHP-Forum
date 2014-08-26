@@ -5,7 +5,8 @@
     <title>Soupaholic</title>
     <link rel="stylesheet" href="styles/login-styles.css">
 	<link rel="stylesheet" href="styles/register-styles.css">
-	
+    <link rel="stylesheet" href="styles/content-styles.css">
+
 </head>
 <body>
     <header>

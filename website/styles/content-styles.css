@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'NeutraText-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/NeutraText-Light.ttf);
+}
+
+.content{
+    font-family: 'NeutraText-Light', Verdana, sans-serif;
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+}
+
+.content h1{
+    background-color: rgba(39, 159, 105,1);
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid rgba(103, 152, 54,1);
+    border-radius: 5px;
+    margin: 0;
+}
+
+.content p{
+    margin: 0;
+}
+
+.table{
+    width: 100%;
+    display: table;
+    font-size: 18px;
+    background-color: rgba(231, 232, 233,1);
+    color: rgba(210, 105, 40,1);
+    border-radius: 5px;
+    border-bottom: 3px solid rgba(167,168,168,1);
+}
+
+.row{
+    display: table-row;
+}
+
+.cell{
+    display: table-cell;
+}
+
+
+.cell p{
+    font-size: 18px;
+}
+
+.top{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.left{
+    width : 20%;
+
+}
+
+.center{
+    width: 60%;
+}
+
+.center p{
+    width: 100%;
+    font-size: 18px;
+    background-color: rgba(231, 232, 233,1);
+    color: rgba(210, 105, 40,1);
+    border-radius: 5px;
+    height: 340px;
+    border-bottom: 3px solid rgba(167,168,168,1);
+}
+
+.right{
+    width: 20%;
+}
+
+.right p{
+    width: 100%;
+    font-size: 18px;
+    background-color: rgba(231, 232, 233,1);
+    color: rgba(210, 105, 40,1);
+    border-radius: 5px;
+    height: 340px;
+    border-bottom: 3px solid rgba(167,168,168,1);
+}
+
