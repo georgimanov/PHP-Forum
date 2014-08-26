@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'NeutraText-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/NeutraText-Light.ttf);
+}
+
+body {
+    font-family: 'NeutraText-Light', Verdana, sans-serif;
+}
+
+#post-page-title {
+    margin: 20px auto;
+    width: 800px;
+    color: #279F69;
+    text-align: center;
+    font-size: 70px;
+}
+
+#back-button {
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #279F69;
+}
+
+a {
+    cursor: default;
+    text-decoration: none;
+    color: white;
+}
+
+#register-wrapper{
+    margin: 0 auto;
+    width: 800px;
+    display: block;
+    font-family: 'NeutraText-Light', Verdana, sans-serif;
+}
+
+#register-wrapper form{
+    padding-top: 30px;
+    background-color: #E7E8E9;
+    border-radius: 30px;
+}
+
+input, textarea, select {
+    display: block;
+    width: 80%;
+    margin: 10px 10%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    font-size: 24px;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+    height: 200px;
+    text-align: left;
+}
+
+select {
+    text-align: center;
+    font-family: 'NeutraText-Light', Verdana, sans-serif;
+}
+
+::-webkit-input-placeholder {
+    /*color: #E7E8E9;*/
+    color: rgb(78, 47, 145);
+    text-transform: uppercase;
+    font-family: NeutraText-Light;
+    text-align: center;
+}
+
+#register-wrapper form input[type='submit']{
+    margin-top: 80px;
+}
+
+#submit-post{
+    margin-top: 80px;
+    height: 80px;
+    background-color: #279F69;
+    color: white;
+    text-transform: uppercase;
+    font-family: NeutraText-Light;
+}

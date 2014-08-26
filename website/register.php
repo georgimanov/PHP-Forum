@@ -2,7 +2,8 @@
 require_once 'header.php';
 require_once 'config.php';
 ?>
-<a href="index.php"><img src="images/logo-fulll.png" class="logo-img-fulll animated fadeInRight"></a><div id="register-wrapper">
+<a href="index.php"><img src="images/logo-fulll.png" class="logo-img-fulll animated fadeInRight"></a>
+<div id="register-wrapper">
     <form action="register.php" method="post" id="register-form" class="animated fadeInLeft">
         <input type="text" name="name" placeholder="first name"/>
         <input type="text" name="lname" placeholder="last name"/>
