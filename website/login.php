@@ -16,7 +16,7 @@ require_once 'header.php';
 		$uname = mysql_escape_string($_POST['uname']);
 		$pass = mysql_escape_string($_POST['pass']);
 		$pass = md5($pass);
-		$sql = mysql_query("SELECT * FROM `usersdb` WHERE `uname` = '$uname' AND `pass` = '$pass'");
+		$sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname' AND `pass` = '$pass'");
 		if (mysql_num_rows($sql) > 0) {
 			session_start();
 			$host = $_SERVER['HTTP_HOST'];

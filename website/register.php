@@ -33,12 +33,12 @@ if (isset($_POST['submit'])) {
             $pass = mysql_escape_string($pass);
             $pass2 = mysql_escape_string($pass2);
             $pass = md5($pass);
-            $sql = mysql_query("SELECT * FROM `usersdb` WHERE `uname` = '$uname'");
+            $sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname'");
             if (mysql_num_rows($sql) > 0) {
                 echo "<div class=\"warning animated fadeInLeft\">User with that name already exists.</div>";
                 exit();
             }
-            mysql_query("INSERT INTO `usersdb` (`id`,`name`,`lname`,`uname`,`pass`,`email`)
+            mysql_query("INSERT INTO `users` (`id`,`name`,`lname`,`uname`,`pass`,`email`)
 				VALUES (NULL,'$name','$lname','$uname','$pass','$email')") or die(mysql_error());
             $host = $_SERVER['HTTP_HOST'];
             $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');

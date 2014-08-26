@@ -6,10 +6,11 @@
   <link rel="stylesheet" href="styles/create-post-styles.css">
 </head>
 <body>
-  <div id="back-button"><a href="content.php">Go back</a></div>
-  <div id="post-page-title">Post something</div>
+  <div id="back-button"><a href="content.php" class="animated fadeInRight">Go back</a></div>
+  <img src="images/spoon-big.png" id="spoon" class="animated fadeInLeft">
+  <div id="post-page-title" class="animated fadeInDown">Post something</div>
   <div id="register-wrapper">
-    <form action="register.php" method="post" id="register-form" class="animated fadeInLeft">
+    <form action="register.php" method="post" id="register-form" class="animated fadeInUp">
         <input type="text" name="title" placeholder="post title"/>
         <textarea name="post-description" rows="10" placeholder="Your text"></textarea>
         <select name="category-select" id="category-select" placeholder="something">
