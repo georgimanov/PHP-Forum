@@ -88,17 +88,20 @@ if(!isset($_SESSION['uname'])){
     <h1>POSTS</h1>
     <?php 
     if(!isset($_GET['cid'])){
-    $sql = "SELECT * FROM topics";
+    $sql = "SELECT * FROM topics ORDER BY id DESC";
 	$res = mysql_query($sql) or die(mysql_error());
 	while ($row = mysql_fetch_assoc($res)) { 
 		$title = $row['topic_title'];
 		$id = $row['id'];
 		$cat_id = $row['category_id'];
 		$views = $row['topic_views'];
+		$creator = $row['topic_creator'];
+		$date = $row['topic_date'];
 		?>
 		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a>
 			<div class="post-views">Views <?php echo $views; ?></div>
 			<div class="post-count">Replies <?php echo countPosts($id); ?></div>
+			<div class="post-creator">Posted by <?php echo htmlentities($creator) ;?></div>
 		</div>
 	
 <?php	
@@ -106,7 +109,7 @@ if(!isset($_SESSION['uname'])){
 		
 	}else{
 		$cid = $_GET['cid'];
-		$sql2 = "SELECT * FROM topics WHERE category_id='".$cid."'";
+		$sql2 = "SELECT * FROM topics WHERE category_id='".$cid."' ORDER BY id DESC";
 		$res2 = mysql_query($sql2) or die(mysql_error());
 		?>
 	<?php	while ($row = mysql_fetch_assoc($res2)) { 
@@ -114,10 +117,13 @@ if(!isset($_SESSION['uname'])){
 		$id = $row['id'];
 		$cat_id = $row['category_id'];
 		$views = $row['topic_views'];
+		$creator = $row['topic_creator'];
+		$date = $row['topic_date'];
 		?>
 		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a>
 			<div class="post-views">Views <?php echo $views; ?></div>
 			<div class="post-count">Replies <?php echo countPosts($id); ?></div>
+			<div class="post-creator">Posted by <?php echo htmlentities($creator) ;?></div>
 		</div>
 	
 
