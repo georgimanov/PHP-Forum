@@ -16,6 +16,10 @@
 .post-titles{
     background-color: rgba(231, 232, 233,1);
     padding: 15px;
+    font-size: 20px;
+}
+.post-titles:hover {
+    background-color: lightgray;
 }
 
 .post-titles:last-of-type{
@@ -25,7 +29,7 @@
 }
 
 .post-titles a{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
     color: rgb(78, 47, 145);
@@ -71,6 +75,9 @@
 
 .row{
     display: table-row;
+}
+.row:hover {
+    background-color: lightgray;
 }
 
 .cell{
@@ -118,6 +125,10 @@ body > div.content.left > div > div > div:nth-child(1) > a > h3{
 
 }
 
+.post-button a:hover {
+  background-color: #6BC28E;
+}
+
 .center{
     width: 60%;
 }
@@ -133,36 +144,48 @@ body > div.content.left > div > div > div:nth-child(1) > a > h3{
     border-bottom: 3px solid rgba(167,168,168,1);
 }
 
-.right{
+.right {
     width: 20%;
 }
 
-.right p{
+.right p {
     width: 100%;
-    font-size: 18px;
+    font-size: 30px;
     background-color: rgba(231, 232, 233,1);
     color: rgba(210, 105, 40,1);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     height: 340px;
     border-bottom: 3px solid rgba(167,168,168,1);
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .welcome{
-   color: rgba(167,168,168,1);
-   margin-left: 1%;
-   width: 20%;
-   box-sizing: border-box;
+    color: rgba(167,168,168,1);
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
-.welcome h1{
+.welcome h1 {
+    width: 100%;
     margin: 0;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 30px;
     color: #279F69;
     display: inline-block;
 }
 
-.welcome a{
+.welcome a {
     text-decoration: none;
+    font-size: 30px;
     color: tomato;
     display: inline-block;
+}
+
+.welcome a:hover {
+    color: rgb(78, 47, 145);
 }

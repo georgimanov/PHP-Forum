@@ -15,13 +15,12 @@ if(!isset($_SESSION['uname'])){
 }
 ?>
 <div class="welcome">
-    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  
-    <a href="logout.php" >Logout</a>
+    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >(Logout)</a>
 </div>
 
 
 <div class="top">
-    <a href="index.php"><img src="images/logo-small.png" class="content-img"></a>
+    <a href="content.php"><img src="images/logo-small.png" class="content-img"></a>
 </div>
 <div class=top>
     <div class="post-button">
@@ -136,7 +135,7 @@ if(!isset($_SESSION['uname'])){
 
 <div class="content right">
     <h1>TAGS</h1>
-    <p>soup, spoon, fork</p>
+    <p>soup, spoon, fork, bowl, kitchen, places, spices, utensils, eat me, bite me</p>
 </div>
 
 <?php include 'footer.php'; ?>

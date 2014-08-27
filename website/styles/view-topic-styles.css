@@ -2,7 +2,6 @@
     color: rgba(167,168,168,1);
     margin-left: 1%;
     width: 20%;
-    box-sizing: border-box;
 }
 
 .welcome h1{
@@ -13,20 +12,20 @@
 .welcome a{
     text-decoration: none;
     color: tomato;
-    width: 100%;
 }
 
 #back-button {
     float: left;
     margin-top: 25px;
     margin-left: 10px;
-    margin-right: 50%;
-    margin-bottom: 30px;
     padding: 5px;
     font-size: 20px;
     border-radius: 5px;
     background-color: #279F69;
+}
 
+#back-button:hover {
+  background-color: #6BC28E;
 }
 
 a {
@@ -37,6 +36,7 @@ a {
 
 .div-table{
     width: 100%;
+    margin-top: 2%;
 }
 
 table{
@@ -142,4 +142,6 @@ table td:nth-child(2){
     font-size: 2em;
     border-radius: 5px;
 }
-
+#reply-button:hover {
+  background-color: #6BC28E;
+}
