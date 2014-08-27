@@ -64,7 +64,16 @@
 
 .left{
     width : 20%;
+}
 
+.cell{
+    padding-left: 15px;
+}
+body > div.content.left > div > div > div:nth-child(1) > a{
+    text-decoration: none;
+}
+body > div.content.left > div > div > div:nth-child(1) > a > h3{
+    color: rgb(78, 47, 145);
 }
 
 .post-button {
@@ -114,3 +123,19 @@
     border-bottom: 3px solid rgba(167,168,168,1);
 }
 
+.welcome{
+   color: rgba(167,168,168,1);
+   margin-left: 1%;
+   width: 20%;
+   box-sizing: border-box;
+}
+
+.welcome h1{
+    margin: 0;
+    color: #279F69;
+}
+
+.welcome a{
+    text-decoration: none;
+    color: tomato;
+}
