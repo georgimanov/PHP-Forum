@@ -44,7 +44,7 @@ if(!isset($_SESSION['uname'])){
                 <a href="content.php?cid=1"><h3>RECIPES</h3></a>
             </div>
             <div class="cell">
-                <span class="list-categories">12</span>
+                <span class="list-categories"><?php echo countTopics("WHERE category_id=1"); ?></span>
             </div>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@ if(!isset($_SESSION['uname'])){
                 <a href="content.php?cid=2"><h3>UTENSILS</h3></a>
             </div>
             <div class="cell">
-                <span class="list-categories">34</span>
+                <span class="list-categories"><?php echo countTopics("WHERE category_id=2"); ?></span>
             </div>
         </div>
         <div class="row">
@@ -60,7 +60,7 @@ if(!isset($_SESSION['uname'])){
                 <a href="content.php?cid=3"><h3>SOUP PLACES</h3></a>
             </div>
             <div class="cell">
-                <span class="list-categories">56</span>
+                <span class="list-categories"><?php echo countTopics("WHERE category_id=3"); ?></span>
             </div>
         </div>
         <div class="row">
@@ -68,7 +68,7 @@ if(!isset($_SESSION['uname'])){
                 <a href="content.php?cid=4"><h3>SPICES</h3></a>
             </div>
             <div class="cell">
-                <span class="list-categories">78</span>
+                <span class="list-categories"><?php echo countTopics("WHERE category_id=4"); ?></span>
             </div>
         </div>
         <div class="row">
@@ -76,7 +76,7 @@ if(!isset($_SESSION['uname'])){
                 <a href="content.php?cid=5"><h3>CHEFS</h3></a>
             </div>
             <div class="cell">
-                <span class="list-categories">90</span>
+                <span class="list-categories"><?php echo countTopics("WHERE category_id=5"); ?></span>
             </div>
         </div>
         </div>
