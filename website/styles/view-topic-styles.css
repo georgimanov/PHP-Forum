@@ -30,3 +30,66 @@ a {
     text-decoration: none;
     color: white;
 }
+
+table{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+table th{
+    background-color: rgba(39, 159, 105, 1);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 3px solid rgba(21, 93, 62, 1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 15px;
+    padding: 5px;
+}
+
+table th:first-of-type{
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+table th:nth-child(2){
+    width: 60%;
+    text-align: left;
+}
+
+table td{
+    background-color: rgba(231, 232, 233,1);
+    color:  rgb(78, 47, 145);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(21, 93, 62, 1);
+    padding: 5px;
+
+}
+
+table td:first-of-type{
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+table td:nth-child(2){
+    width: 60%;
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+    height: 200px;
+    text-align: left;
+    width: 600px;
+    background: rgba(231, 232, 233,1);
+}
+
+
+
