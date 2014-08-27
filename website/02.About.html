@@ -2,80 +2,102 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title> About - Team "Flax New Zealand" in SoftUni BG</title>
+	<style>
+	@font-face {
+    font-family: 'NeutraText-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/NeutraText-Light.ttf);
+}
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+	}
+	
+	header {
+		font-family: 'NeutraText-Light', Verdana, sans serif;
+		margin:20px;
+		color:#279F69;
+	}
+	
+	.main{
+		border-radius: 5px;
+		border: 1px solid  #279F69;
+		padding: 20px;
+		margin:20px;
+		font-family: 'NeutraText-Light', Verdana, sans serif;
+		
+	}
+	
+	.team{
+		margin:20px;
+		font-family: 'NeutraText-Light', Verdana, sans serif;
+		border-radius: 5px;
+		border: 1px solid  #279F69;
+		padding: 20px;
+	
+	}
+	
+	figcaption{
+		margin:20px;
+		font-family: 'NeutraText-Light', Verdana, sans serif;
+		font-weight:bold;
+		
+	}
+	</style>
 </head>
 <body>
     <header>
         <h1>About </h1>
-        <section class="nav">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="02.About.html">About</a></li>
-                    <li><a href="#">News</a></li>
-					<li><a href="#">Forum</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
+	</header>
+	
     <section class="main">
         <h2>Team "Flax New Zealand"</h2>
+		</br>
         <article>
-            Team "Flax New Zealand" was given the opportunity to express themselves in a way that demostrate knowledge, creativity, teamwork and programming skills.
-			We strive to create high-quality collaborative software and this way to contribute to the Bulgarian IT sector.
-			We present to you the "Soupaholics" forum, which is actually a part of our education in the area of web development and especially PHP 
-			at <a href="http://softuni.bg">Software University Bulgaria</a>.
+            <p>Team "Flax New Zealand" was given the opportunity to express themselves in a way that demostrate knowledge, creativity, teamwork and programming skills.</p></br>
+			<p>We strive to create high-quality collaborative software and this way to contribute to the Bulgarian IT sector.</p></br>
+			<p>We present to you the "Soupaholics" forum, which is actually a part of our education in the area of web development and especially PHP 
+			at <a href="http://softuni.bg">Software University Bulgaria</a>.</p>
+			</br>
 			</br>
 			Please, enjoy your presence here!  
 			</br>
-			You can see here the team members and their names.
-			</hr>
-			</br>
-			</article>
-		
-        <section class="members">
-            <div>
+		</article>
+	</section >
+		<header>
+			<h1>Team members</h1>
+		</header>
+        <section class="team">
+            <div class ="members" >
                 <figcaption>Momchil Dishev</figcaption>
                 <figure class="momchil">
 				<img src="images/momchil.png" alt = "Momchil Dishev"></img>
                 </figure>
             </div>
-            <div>
+            <div class ="members">
                 <figcaption>Georgi Manov</figcaption>
                 <figure class="georgi">
 				<img src="images/georgi.png" alt = "Georgi Manov"></img></figure>
             </div>
-            <div>
+            <div class ="members">
                 <figcaption>Iliya Boyanov</figcaption>
                 <figure class="iliya">
 				<img src="images/iliya.jpg" alt = "Iliya Boyanov"></img></figure>
             </div>
-            <div>
+            <div class ="members">
                 <figcaption>Georgi Teoharov</figcaption>
                 <figure class="gteo">
 				<img src="images/gteo.jpg" alt = "Georgi Teoharov"></img></figure>
             </div>
-            <div>
+            <div class ="members">
                 <figcaption>Dimitar Smilyanov</figcaption>
                 <figure class="dimitar">
 				<img src="images/dimitar.jpg" alt = "Dimitar Smilyanov"></img>
 				</figure>
             </div>
-
         </section>
     </section>
-    <footer>
-            <nav>
-                <ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="02.About.html">About</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Forum</a></li>
-					<li><a href="#">Contacts</a></li>
-					<li><a href="https://softuni.bg/">SoftUni Bg</a></li>
-					<li><span>(c) 2014 Team Flax New Zealand @ Software University Bulgaria</span></li>
-        </ul>
-        </nav>
-    </footer>
 </body>
 </html>
