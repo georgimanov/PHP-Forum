@@ -13,8 +13,10 @@ if(!isset($_SESSION['uname'])){
     exit();
 }
 ?>
+<div class="welcome">
+    <h1>Hello, <?php echo $_SESSION['uname'] ?> !</h1>  <a href="logout.php" >Logout</a>
+</div>
 
-Hello <?php echo $_SESSION['uname'] ?>! <a href="logout.php" >Logout</a>
 
 <div class="top">
     <a href="index.php"><img src="images/logo-small.png" class="content-img"></a>
