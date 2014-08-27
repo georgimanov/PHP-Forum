@@ -32,22 +32,28 @@ require_once 'config.php';
 		$oldViews +=1;	
 		$sqlUpdate = mysql_query("UPDATE topics SET topic_views='".$oldViews."' WHERE id = $tid");
 		?>
-		<table class="topics">
-			<tr><th><?php echo htmlentities($topic_creator) ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>
-			<?php $sql2 = "SELECT * FROM posts WHERE topic_id=$tid";
-			$res2 = mysql_query($sql2) or die(msql_error());
-			while ($row = mysql_fetch_assoc($res2)) { 
-				$post_creator = $row['post_creator'];
-				$content = $row['post_content'];
-				$post_date = $row['post_date'];
-				?><tr>
-				<td><?php echo htmlentities($post_creator); ?></td><td><?php echo htmlentities($content); ?></td><td><?php echo $post_date; ?></td>
-				</tr>
-		<?php	} ?>
-		</table>
-		<form method="post">
-		<div>Your reply: <br/><textarea name="answer"></textarea><input type="submit" name="submit" value="Add reply" /></div>
-		</form>
+        <div class="div-table">
+            <table class="topics">
+                <tr><th><?php echo htmlentities($topic_creator) ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>
+                <?php $sql2 = "SELECT * FROM posts WHERE topic_id=$tid";
+                $res2 = mysql_query($sql2) or die(msql_error());
+                while ($row = mysql_fetch_assoc($res2)) {
+                    $post_creator = $row['post_creator'];
+                    $content = $row['post_content'];
+                    $post_date = $row['post_date'];
+                    ?><tr>
+                    <td><?php echo htmlentities($post_creator); ?></td><td><?php echo htmlentities($content); ?></td><td><?php echo $post_date; ?></td>
+                    </tr>
+            <?php	} ?>
+            </table>
+        </div>
+		<div class="reply-msg">
+            <form method="post">
+                <h3>Post reply</h3>
+                <textarea name="answer" id="reply-textarea" rows="10" placeholder="Your text"></textarea>
+                <input type="submit" name="submit" id="reply-button" value="REPLY" />
+            </form>
+        </div>
 		<?php
 		if(isset($_POST['answer'])){
 			$answer = $_POST['answer'];
