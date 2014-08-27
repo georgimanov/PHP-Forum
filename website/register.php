@@ -27,11 +27,19 @@ if (isset($_POST['submit'])) {
         if ($pass == $pass2) {
             $name = mysql_escape_string($_POST['name']);
             $uname = mysql_escape_string($_POST['uname']);
+			if(strlen($uname) < 3 || strlen($uname) > 25){
+				echo "<div class=\"warning animated fadeInLeft\">Username is too short.</div>";
+				exit();
+			}
             $lname = mysql_escape_string($_POST['lname']);
             $email = mysql_escape_string($email);
             $email2 = mysql_escape_string($email2);
             $pass = mysql_escape_string($pass);
             $pass2 = mysql_escape_string($pass2);
+			if(strlen($pass) < 5 || strlen($pass) > 25){
+				echo "<div class=\"warning animated fadeInLeft\">Password is too short.</div>";
+				exit();
+			}
             $pass = md5($pass);
             $sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname'");
             if (mysql_num_rows($sql) > 0) {
