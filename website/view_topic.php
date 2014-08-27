@@ -5,7 +5,7 @@ require_once 'header.php';
 ?>
 
 <div class="welcome">
-    <h1>Hello, <?php echo $_SESSION['uname'] ?> !</h1>  <a href="logout.php" >Logout</a>
+    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >Logout</a>
 </div>
 
 <div id="back-button"><a href="content.php" class="animated fadeInRight">Go back</a></div>
@@ -29,7 +29,7 @@ require_once 'config.php';
 		}
 		?>
 		<table class="topics">
-			<tr><th><?php echo $topic_creator ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>
+			<tr><th><?php echo htmlentities($topic_creator) ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>
 			<?php $sql2 = "SELECT * FROM posts WHERE topic_id=$tid";
 			$res2 = mysql_query($sql2) or die(msql_error());
 			while ($row = mysql_fetch_assoc($res2)) { 
@@ -37,7 +37,7 @@ require_once 'config.php';
 				$content = $row['post_content'];
 				$post_date = $row['post_date'];
 				?><tr>
-				<td><?php echo $post_creator; ?></td><td><?php echo $content; ?></td><td><?php echo $post_date; ?></td>
+				<td><?php echo htmlentities($post_creator); ?></td><td><?php echo htmlentities($content); ?></td><td><?php echo $post_date; ?></td>
 				</tr>
 		<?php	} ?>
 		</table>
