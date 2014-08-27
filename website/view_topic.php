@@ -22,11 +22,15 @@ require_once 'config.php';
 		$title = "";
 		$topic_creator = "";
 		$topic_date = "";
+		$oldViews = "";
 		while ($row = mysql_fetch_assoc($res)){
 			$title = $row['topic_title'];
 			$topic_creator = $row['topic_creator'];
 			$topic_date = $row['topic_date'];
+			$oldViews = $row['topic_views'];
 		}
+		$oldViews +=1;	
+		$sqlUpdate = mysql_query("UPDATE topics SET topic_views='".$oldViews."' WHERE id = $tid");
 		?>
 		<table class="topics">
 			<tr><th><?php echo htmlentities($topic_creator) ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>

@@ -93,8 +93,11 @@ if(!isset($_SESSION['uname'])){
 		$title = $row['topic_title'];
 		$id = $row['id'];
 		$cat_id = $row['category_id'];
+		$views = $row['topic_views'];
 		?>
-		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a></div>
+		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a>
+			<div class="post-views">Views <?php echo $views; ?></div>
+		</div>
 	
 <?php	
 	}
@@ -108,8 +111,11 @@ if(!isset($_SESSION['uname'])){
 		$title = $row['topic_title'];
 		$id = $row['id'];
 		$cat_id = $row['category_id'];
+		$views = $row['topic_views'];
 		?>
-		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a></div>
+		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a>
+			<div class="post-views">Views <?php echo $views; ?></div>
+		</div>
 	
 
 <?php	
