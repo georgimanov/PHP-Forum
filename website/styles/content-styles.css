@@ -158,9 +158,11 @@ body > div.content.left > div > div > div:nth-child(1) > a > h3{
 .welcome h1{
     margin: 0;
     color: #279F69;
+    display: inline-block;
 }
 
 .welcome a{
     text-decoration: none;
     color: tomato;
+    display: inline-block;
 }

@@ -15,7 +15,8 @@ if(!isset($_SESSION['uname'])){
 }
 ?>
 <div class="welcome">
-    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >Logout</a>
+    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  
+    <a href="logout.php" >Logout</a>
 </div>
 
 
