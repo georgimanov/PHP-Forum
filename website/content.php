@@ -98,6 +98,7 @@ if(!isset($_SESSION['uname'])){
 		?>
 		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a>
 			<div class="post-views">Views <?php echo $views; ?></div>
+			<div class="post-count">Replies <?php echo countPosts($id); ?></div>
 		</div>
 	
 <?php	
@@ -116,6 +117,7 @@ if(!isset($_SESSION['uname'])){
 		?>
 		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a>
 			<div class="post-views">Views <?php echo $views; ?></div>
+			<div class="post-count">Replies <?php echo countPosts($id); ?></div>
 		</div>
 	
 
