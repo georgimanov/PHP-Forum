@@ -12,6 +12,31 @@
     padding: 10px;
 }
 
+
+.post-titles{
+    background-color: rgba(231, 232, 233,1);
+    padding: 15px;
+}
+
+.post-titles:last-of-type{
+    border-bottom: 3px solid rgba(167,168,168,1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.post-titles a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(78, 47, 145);
+}
+.post-titles a:visited{
+    text-decoration: none;
+    color: rgb(78, 47, 145);
+}
+
+
+
 .content h1{
     background-color: rgba(39, 159, 105, 1);
     color: #fff;
