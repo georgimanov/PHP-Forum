@@ -14,20 +14,20 @@ if(!isset($_SESSION['uname'])){
     exit();
 }
 ?>
-<div class="welcome">
+<div class="welcome animated fadeInDown">
     <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >(Logout)</a>
 </div>
 
 
-<div class="top">
+<div class="top animated fadeInDown">
     <a href="content.php"><img src="images/logo-small.png" class="content-img"></a>
 </div>
-<div class=top>
+<div class="top animated fadeInDown">
     <div class="post-button">
         <a href="create-post.php">POST SOMETHING</a>
     </div>
 </div>
-<div class="content left">
+<div class="content left animated fadeInRight">
     <h1>CATEGORIES</h1>
     <div class="table">
         <div class="row">
@@ -83,7 +83,7 @@ if(!isset($_SESSION['uname'])){
     </div>
 </div>
 
-<div class="content center">
+<div class="content center animated fadeInUp">
     <h1>POSTS</h1>
     <?php 
     if(!isset($_GET['cid'])){
@@ -133,9 +133,13 @@ if(!isset($_SESSION['uname'])){
      ?>
 </div>
 
-<div class="content right">
+<div class="content right animated fadeInLeft">
     <h1>TAGS</h1>
     <p>soup, spoon, fork, bowl, kitchen, places, spices, utensils, eat me, bite me</p>
 </div>
+
+    <div id="fork-image">
+        <a href="02.About.html"><img src="images/fork-small.png"></a>
+    </div>
 
 <?php include 'footer.php'; ?>
