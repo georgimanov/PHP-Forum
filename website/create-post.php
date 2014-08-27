@@ -10,7 +10,7 @@ session_start();
 </head>
 <body>
 <div class="welcome">
-    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >Logout</a>
+    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >(Logout)</a>
 </div>
 <?php
 require_once 'config.php';
@@ -26,7 +26,7 @@ if(!isset($_SESSION['uname'])){
 }
 ?>
 
-  <div id="back-button"><a href="content.php" class="animated fadeInRight">Go back</a></div>
+  <div id="back-button" class="animated fadeInRight"><a href="content.php">Go back</a></div>
   <img src="images/spoon-big.png" id="spoon" class="animated fadeInLeft">
   <div id="post-page-title" class="animated fadeInDown">Post something</div>
   <div id="register-wrapper">
