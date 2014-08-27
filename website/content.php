@@ -1,6 +1,7 @@
 <?php 
     session_start();
     require_once 'header.php';
+	require_once 'queries.php';
 ?>
 
 <?php require_once 'config.php'; 
@@ -31,7 +32,16 @@ if(!isset($_SESSION['uname'])){
     <div class="table">
         <div class="row">
             <div class="cell">
-                <a href="view_category.php?cid=1"><h3>RECIPES</h3></a>
+                <a href="content.php"><h3>ALL</h3></a>
+            </div>
+            <div class="cell">
+                <span class="list-categories"><?php echo countTopics(""); ?></span>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="cell">
+                <a href="content.php?cid=1"><h3>RECIPES</h3></a>
             </div>
             <div class="cell">
                 <span class="list-categories">12</span>
@@ -39,7 +49,7 @@ if(!isset($_SESSION['uname'])){
         </div>
         <div class="row">
             <div class="cell">
-                <a href="view_category.php?cid=2"><h3>UTENSILS</h3></a>
+                <a href="content.php?cid=2"><h3>UTENSILS</h3></a>
             </div>
             <div class="cell">
                 <span class="list-categories">34</span>
@@ -47,7 +57,7 @@ if(!isset($_SESSION['uname'])){
         </div>
         <div class="row">
             <div class="cell">
-                <a href="view_category.php?cid=3"><h3>SOUP PLACES</h3></a>
+                <a href="content.php?cid=3"><h3>SOUP PLACES</h3></a>
             </div>
             <div class="cell">
                 <span class="list-categories">56</span>
@@ -55,7 +65,7 @@ if(!isset($_SESSION['uname'])){
         </div>
         <div class="row">
             <div class="cell">
-                <a href="view_category.php?cid=4"><h3>SPICES</h3></a>
+                <a href="content.php?cid=4"><h3>SPICES</h3></a>
             </div>
             <div class="cell">
                 <span class="list-categories">78</span>
@@ -63,7 +73,7 @@ if(!isset($_SESSION['uname'])){
         </div>
         <div class="row">
             <div class="cell">
-                <a href="view_category.php?cid=5"><h3>CHEFS</h3></a>
+                <a href="content.php?cid=5"><h3>CHEFS</h3></a>
             </div>
             <div class="cell">
                 <span class="list-categories">90</span>
@@ -75,7 +85,38 @@ if(!isset($_SESSION['uname'])){
 
 <div class="content center">
     <h1>POSTS</h1>
-    <p>Lorem ipsum</p>
+    <?php 
+    if(!isset($_GET['cid'])){
+    $sql = "SELECT * FROM topics";
+	$res = mysql_query($sql) or die(mysql_error());
+	while ($row = mysql_fetch_assoc($res)) { 
+		$title = $row['topic_title'];
+		$id = $row['id'];
+		$cat_id = $row['category_id'];
+		?>
+		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a></div>
+	
+<?php	
+	}
+		
+	}else{
+		$cid = $_GET['cid'];
+		$sql2 = "SELECT * FROM topics WHERE category_id='".$cid."'";
+		$res2 = mysql_query($sql2) or die(mysql_error());
+		?>
+	<?php	while ($row = mysql_fetch_assoc($res2)) { 
+		$title = $row['topic_title'];
+		$id = $row['id'];
+		$cat_id = $row['category_id'];
+		?>
+		<div class="post-titles"> <a href="view_topic.php?cid=<?php echo $cat_id; ?>&tid=<?php echo $id; ?>"><?php echo htmlentities($title) ?> </a></div>
+	
+
+<?php	
+	}
+	}
+	
+     ?>
 </div>
 
 <div class="content right">
