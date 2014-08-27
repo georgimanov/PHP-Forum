@@ -3,7 +3,7 @@ session_start();
 
 require_once 'header.php';
 ?>
-Hello <?php echo $_SESSION['uname'] ?>! <a href="logout.php" >Logout</a>
+Hello <?php echo htmlentities($_SESSION['uname']) ?>! <a href="logout.php" >Logout</a>
 <?php
 require_once 'config.php';
 
