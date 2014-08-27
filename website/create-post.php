@@ -10,7 +10,7 @@ session_start();
 </head>
 <body>
 <div class="welcome">
-    <h1>Hello, <?php echo $_SESSION['uname'] ?> !</h1>  <a href="logout.php" >Logout</a>
+    <h1>Hello, <?php echo htmlentities($_SESSION['uname']) ?> !</h1>  <a href="logout.php" >Logout</a>
 </div>
 <?php
 require_once 'config.php';
