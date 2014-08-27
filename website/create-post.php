@@ -9,7 +9,9 @@ session_start();
   <link rel="stylesheet" href="styles/create-post-styles.css">
 </head>
 <body>
-Hello <?php echo $_SESSION['uname'] ?>! <a href="logout.php" >Logout</a>
+<div class="welcome">
+    <h1>Hello, <?php echo $_SESSION['uname'] ?> !</h1>  <a href="logout.php" >Logout</a>
+</div>
 <?php
 require_once 'config.php';
 ?>

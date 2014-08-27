@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles/login-styles.css">
 	<link rel="stylesheet" href="styles/register-styles.css">
     <link rel="stylesheet" href="styles/content-styles.css">
+        <link rel="stylesheet" href="styles/view-topic-styles.css">
+
 
 </head>
 <body>

@@ -1,0 +1,32 @@
+.welcome{
+    color: rgba(167,168,168,1);
+    margin-left: 1%;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.welcome h1{
+    margin: 0;
+    color: #279F69;
+}
+
+.welcome a{
+    text-decoration: none;
+    color: tomato;
+}
+
+#back-button {
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #279F69;
+}
+
+a {
+    cursor: default;
+    text-decoration: none;
+    color: white;
+}

@@ -9,6 +9,23 @@ body {
     font-family: 'NeutraText-Light', Verdana, sans-serif;
 }
 
+.welcome{
+    color: rgba(167,168,168,1);
+    margin-left: 1%;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.welcome h1{
+    margin: 0;
+    color: #279F69;
+}
+
+.welcome a{
+    text-decoration: none;
+    color: tomato;
+}
+
 #post-page-title {
     margin: 20px auto;
     width: 800px;

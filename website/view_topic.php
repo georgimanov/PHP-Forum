@@ -4,8 +4,12 @@ session_start();
 require_once 'header.php';
 ?>
 
-Hello <?php echo $_SESSION['uname'] ?>!
-<a href="logout.php" >Logout</a>
+<div class="welcome">
+    <h1>Hello, <?php echo $_SESSION['uname'] ?> !</h1>  <a href="logout.php" >Logout</a>
+</div>
+
+<div id="back-button"><a href="content.php" class="animated fadeInRight">Go back</a></div>
+
 <?php
 require_once 'config.php';
 ?>
@@ -23,7 +27,6 @@ require_once 'config.php';
 			$topic_creator = $row['topic_creator'];
 			$topic_date = $row['topic_date'];
 		}
-		echo $_SESSION['uname'];
 		?>
 		<table class="topics">
 			<tr><th><?php echo $topic_creator ;?></th><th><?php echo $title ;?></th><th><?php echo $topic_date ; ?></th></tr>
