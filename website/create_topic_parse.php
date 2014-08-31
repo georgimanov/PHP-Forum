@@ -19,8 +19,8 @@ if (isset($_POST['submit'])) {
 	}else{
 		require_once 'config.php';
 		$cid = $_POST['cid'];
-		$title = $_POST['topic_title'];
-		$content = $_POST['topic_content'];
+		$title = addslashes($_POST['topic_title']);
+		$content = addslashes($_POST['topic_content']);
 		$creator = $_SESSION['uname'];
 		$sql = "INSERT INTO topics (category_id, topic_title, topic_creator, topic_date, topic_reply_date) VALUES 
 		('".$cid."', '".$title."', '".$creator."' , now() , now())";
