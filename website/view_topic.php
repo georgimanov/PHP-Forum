@@ -65,10 +65,14 @@ require_once 'config.php';
 			$host = $_SERVER['HTTP_HOST'];
 	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 	$extra = 'view_topic.php';
-	header("Location: http://$host$uri/$extra?cid=$cid&tid=$tid"); 
+	
+	$url = 'http://' . $host . $uri . '/'. $extra . '?cid=' .$cid. '&tid=' . $tid ;
+    	redirect($url);
+	
+	//header("Location: http://$host$uri/$extra?cid=$cid&tid=$tid"); 
 		}
 	}else{
-		echo "<p>This topic does not exist!</p>";
+		echo "<p>Topic does not exist!</p>";
 	}
 ?>
 
@@ -76,10 +80,37 @@ require_once 'config.php';
 	$host = $_SERVER['HTTP_HOST'];
 	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 	$extra = 'login.php';
-	header("Location: http://$host$uri/$extra");
+	
+	$url = 'http://' . $host . $uri . '/'. $extra;
+    	redirect($url);
+	
+//	header("Location: http://$host$uri/$extra");
 	}
 ?>
 
 <?php
 require_once 'footer.php';
+
+//$url = 'http://' . $host . $uri . '/'. $extra;
+//    	redirect($url);
+  
+function redirect($url)
+{
+    if (!headers_sent())
+    {    
+        header('Location: '.$url);
+        exit;
+    }
+    else
+    {  
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+        echo '<noscript>';
+        echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
+        echo '</noscript>'; exit;
+	}
+}
+
+
 ?>

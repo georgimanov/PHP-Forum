@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'header.php';
 ?>
 <div id="login-form">
@@ -10,7 +11,6 @@ require_once 'header.php';
     </form>
 </div>
 <?php
-	session_start();
   require_once 'config.php';
   require_once 'footer.php';
   if (isset($_POST['submit'])) {
@@ -19,16 +19,38 @@ require_once 'header.php';
     $pass = md5($pass);
     $sql = mysql_query("SELECT * FROM `users` WHERE `uname` = '$uname' AND `pass` = '$pass'");
     if (mysql_num_rows($sql) > 0) {
-      
-      $host = $_SERVER['HTTP_HOST'];
-      $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-      $extra = 'content.php';
-      $_SESSION['uname'] = $uname;
-      header("Location: http://$host$uri/$extra");
-      
+	
+    	$host = $_SERVER['HTTP_HOST'];
+    	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\'); //$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    	$extra = 'content.php';
+    	$_SESSION['uname'] = $uname;
+    	$url = 'http://' . $host . $uri . '/'. $extra;
+    	redirect($url);
+   
+       //echo "<div id=\"warning-message\" class=\"animated fadeInUp\">Correct username or password</div>";
+       exit;
     
-    }else{
+    } else {
       echo "<div id=\"warning-message\" class=\"animated fadeInUp\">Invalid username or password</div>";
     }
   }
+  
+  function redirect($url)
+{
+    if (!headers_sent())
+    {    
+        header('Location: '.$url);
+        exit;
+        }
+    else
+        {  
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+        echo '<noscript>';
+        echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
+        echo '</noscript>'; exit;
+    }
+}
+  
 ?>

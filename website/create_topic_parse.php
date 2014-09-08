@@ -9,12 +9,16 @@ if ($_POST['cid'] == "" || !isset($_SESSION['uname'])) {
 	$host = $_SERVER['HTTP_HOST'];
 	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 	$extra = 'login.php';
-	header("Location: http://$host$uri/$extra");
+	
+	$url = 'http://' . $host . $uri . '/'. $extra;
+	redirect($url);
+	
+	//header("Location: http://$host$uri/$extra");
 	exit();
 }
 if (isset($_POST['submit'])) {
 	if (($_POST['topic_title'] == "") || ($_POST['topic_content'] == "")) {
-	echo "You not fill all fields.Please return.";
+	echo "Please fill all the necessary fields.";
 		exit();
 	}else{
 		require_once 'config.php';
@@ -36,11 +40,37 @@ if (isset($_POST['submit'])) {
 			$host = $_SERVER['HTTP_HOST'];
 			$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 			$extra = "view_topic.php?cid=".$cid."&tid=".$new_topic_id;
-			header("Location: http://$host$uri/$extra");
+			
+			$url = 'http://' . $host . $uri . '/'. $extra;
+			redirect($url);
+			
+			//header("Location: http://$host$uri/$extra");
 		 }else{
-			 echo "Fuck You";
+			 echo "Error!";
 		 } 
 	}
 }
 require_once 'footer.php';
+
+//$url = 'http://' . $host . $uri . '/'. $extra;
+//    	redirect($url);
+  
+function redirect($url)
+{
+    if (!headers_sent())
+    {    
+        header('Location: '.$url);
+        exit;
+    }
+    else
+    {  
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+        echo '<noscript>';
+        echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
+        echo '</noscript>'; exit;
+	}
+}
+
 ?>
